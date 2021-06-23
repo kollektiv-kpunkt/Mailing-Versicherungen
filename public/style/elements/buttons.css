@@ -1,0 +1,43 @@
+.button {
+    display: inline-block;
+
+    font-size: 1.25rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--buttoncolor);
+    border: 2px solid var(--buttonbordercolor);
+    text-decoration: none;
+    text-align: center;
+    
+    background-color: var(--buttonbackgroundcolor);
+    border-radius: 0.25em;
+
+    padding: 0.6em 2em;
+    line-height: 0.75;
+
+    --buttoncolor: var(--white);
+    --buttonbordercolor: var(--red);
+    --buttonbackgroundcolor: var(--red);
+
+    cursor: pointer;
+}
+
+.button.neg {
+    --buttoncolor: var(--white);
+    --buttonbordercolor: var(--white);
+    --buttonbackgroundcolor: transparent;
+}
+
+.buttongrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.buttongrid .button {
+    width: calc(50% - 0.5rem);
+    box-sizing: border-box;
+}

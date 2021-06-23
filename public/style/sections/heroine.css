@@ -1,0 +1,66 @@
+#heroine {
+    height: 100vh;
+    height: calc(100 * var(--vh));
+    background-color: var(--black);
+}
+
+#heroine-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    height: 100%;
+}
+
+.heroine-half {
+    margin: auto 0;
+}
+
+#heroine-text {
+    color: var(--white);
+}
+
+#heroine-overtitle {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+#heroine-title {
+    font-size: 5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Bar Chart */
+
+#heroine-chart {
+    width: 100%;
+    max-width: 670px;
+    height: 400px;
+    max-height: 50vh;
+    margin: 0 0 0 auto;
+}
+
+.ct-grid {
+    stroke: var(--white);
+    stroke-width: 0.5px;
+    stroke-dasharray: 10px;
+}
+
+.ct-chart-bar {
+    color: var(--white);
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.ct-series-a {
+    stroke: var(--red);
+}
+
+.ct-series-b {
+    stroke: var(--white);
+}
+
+.ct-bar {
+    stroke-width: 15px
+}

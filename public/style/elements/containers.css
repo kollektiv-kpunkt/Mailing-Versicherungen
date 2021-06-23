@@ -1,0 +1,9 @@
+.mdcont {
+    padding-left: var(--mcpad);
+    padding-right: var(--mcpad);
+}
+
+.smcont {
+    padding-left: var(--scpad);
+    padding-right: var(--scpad);
+}

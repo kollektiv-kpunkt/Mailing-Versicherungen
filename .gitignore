@@ -1,0 +1,3 @@
+/vendor
+/config/*.inc.*
+!/config/*.inc.example.*
