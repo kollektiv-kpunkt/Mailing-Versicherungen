@@ -1,0 +1,22 @@
+.section {
+    min-height: calc(100 * var(--vh) - (2 * (2rem + var(--navbarHeight))));
+    padding-top: calc(2rem + var(--navbarHeight));
+    padding-bottom: calc(2rem + var(--navbarHeight));
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.section.black {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.section-title {
+    text-align: center;
+}
+
+.section-content {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+}

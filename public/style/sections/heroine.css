@@ -1,7 +1,10 @@
 #heroine {
-    height: 100vh;
-    height: calc(100 * var(--vh));
+    min-height: 100vh;
+    min-height: calc(100 * var(--vh));
     background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 #heroine-cont {
@@ -13,6 +16,8 @@
 
 .heroine-half {
     margin: auto 0;
+    padding-top: var(--navbarHeight);
+    padding-bottom: var(--navbarHeight);
 }
 
 #heroine-text {
@@ -63,4 +68,51 @@
 
 .ct-bar {
     stroke-width: 15px
+}
+
+#heroine-chartlegend {
+    color: var(--white); 
+    text-align:end; 
+    font-size: 0.75rem
+}
+
+@media only screen and (max-width: 1080px) {
+    #heroine-cont {
+        grid-template-columns: 1fr;
+        row-gap: 3rem;
+    }
+
+    .heroine-half {
+        max-width: 15cm;
+        margin-right: auto;
+        margin-left: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    #heroine-text {
+        margin-top: var(--navbarHeight);
+    }
+    
+    #heroine-graph {
+        margin-bottom: var(--navbarHeight);
+    }
+    
+    #heroine-chart-cont {
+        margin: 0 auto;
+    }
+
+    .ct-chart-bar {font-size: 0.6rem;}
+    
+    #heroine-chartlegend {text-align:unset;}
+}
+
+@media only screen and (max-width: 480px) {
+    #heroine-text {
+        margin-top: calc( 2rem + var(--navbarHeight));
+    }
+    
+    #heroine-graph {
+        margin-bottom: calc( 2rem + var(--navbarHeight));
+    }
 }

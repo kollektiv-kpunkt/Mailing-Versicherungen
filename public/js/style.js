@@ -23,7 +23,13 @@ var styleSets = function styleSets() {
     
     var lcpad = 5 * vw;
     document.documentElement.style.setProperty("--lcpad", `${lcpad}px`);
+    
+    var navbarHeight = document.getElementsByTagName("nav")[0].offsetHeight;
+    document.documentElement.style.setProperty("--navbarHeight", `${navbarHeight}px`);
+
+
 }
 
 window.addEventListener("load", styleSets, false);
 window.addEventListener("resize", styleSets, false);
+window.addEventListener("scroll", styleSets, false);

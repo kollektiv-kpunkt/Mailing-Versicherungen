@@ -14,14 +14,67 @@ include __DIR__ . "/partials/header.part.php";
             </div>
         </div>
         <div id="heroine-graph" class="heroine-half">
-            <div style="display: flex; width: 500px; margin: 0 0 0 auto">
+            <div id="heroine-chart-cont" style="display: flex; max-width: 500px;">
                 <div id="heroine-chart"></div>
             </div>
-            <p class="text-small" style="color: var(--white); text-align:end; font-size: 0.75rem"><em><?= $i18n["heroine-chartlegend"] ?></em></p>
+            <p class="text-small" id="heroine-chartlegend"><em><?= $i18n["heroine-chartlegend"] ?></em></p>
         </div>
     </div>
 </div>
 
+<div id="<?= $i18n["s-participate"] ?>" class="section">
+    <div class="section-cont smcont">
+        <h2 class="section-title"><?= $i18n["participate-title"] ?></h2>
+        <p class="section-content"><?= $i18n["participate-content"] ?></p>
+        <form data-interface="step1" data-step="1" class="ajax-form form-step">
+            <input type="text" placeholder="<?= $i18n["misc-fname"] ?>" name="fname" required>
+            <input type="text" placeholder="<?= $i18n["misc-lname"] ?>" name="lname" required>
+            <input type="email" placeholder="<?= $i18n["misc-email"] ?>" name="email" required>
+            <input type="text" placeholder="<?= $i18n["misc-phone"] ?>" name="phone">
+            <select class="nobottom" name="insurance" required>
+                <option value="" selected disabled><?= $i18n["misc-choose"] ?></option>
+                <?php
+                $i = 1;
+                foreach ($i18n["misc-insurances"] as $insurance) {
+                    echo("<option value='insc-{$i}'>$insurance</option>");
+                    $i++;
+                }
+                ?>
+            </select>
+            <button type="submit" class="button"><?= $i18n["b-next"] ?></button>
+            <div class="chk-group">
+                <input type="checkbox" id="insured" name="insured" value="1">
+                <label for="insured"><?= $i18n["misc-insured"] ?></label>
+            </div>
+            <div class="chk-group">
+                <input type="checkbox" id="privacy" name="privacy" value="1" checked>
+                <label for="privacy"><?= $i18n["misc-privacy"] ?></label>
+            </div>
+            <input type="hidden" name="uuid" value="<?= uniqid("email_") ?>">
+        </form>
+        <form data-interface="step2" data-step="2" class="ajax-form form-step" style="display: none;">
+            <input type="text" class="fullwidth" name="subject" placeholder="<?= $i18n["misc-subject"] ?>" id="subject" required>
+            <textarea name="email" id="email" class="fullwidth" rows="8" placeholder="<?= $i18n["misc-mailcontent"] ?>" required></textarea>
+            <input type="hidden" name="uuid" id="uuid-2">
+            <button type="submit" class="button"><?= $i18n["b-next"] ?></button>
+        </form>
+        <form data-interface="step3" data-step="3" class="ajax-form form-step" style="display: none;">
+            <h4 style="color: var(--red)" id="thx-title"></h4>
+            <p id="thx-content"><?= $i18n["email-thx-content"] ?></p>
+        </form>
+    </div>
+</div>
+
+<div class="section black" id="<?= $i18n["s-more-info"] ?>">
+    <div class="section-cont smcont">
+        <h2 class="section-title"><?= $i18n["more-title"] ?></h2>
+        <?= $i18n["more-content"] ?>
+        <div class="buttongrid">
+            <a href="<?= $i18n["s-donate"] ?>" class="button neg"><?= $i18n["b-donate"] ?></a>
+            <a href="#<?= $i18n["s-participate"] ?>" class="button"><?= $i18n["b-participate"] ?></a>
+        </div>
+    </div>
+</div>
 
 
 <script src="/lib/chartist/chartist.min.js"></script>

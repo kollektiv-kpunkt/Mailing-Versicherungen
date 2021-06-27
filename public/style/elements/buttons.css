@@ -1,5 +1,5 @@
 .button {
-    display: inline-block;
+    display: block;
 
     font-size: 1.25rem;
     font-family: 'Rubik', sans-serif;
@@ -35,9 +35,20 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 1.5rem;
+    max-width: 15cm;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .buttongrid .button {
     width: calc(50% - 0.5rem);
     box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1200px) {
+    .buttongrid .button {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+    }
 }

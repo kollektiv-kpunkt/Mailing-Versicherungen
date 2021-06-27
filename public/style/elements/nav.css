@@ -1,0 +1,85 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#nav-cont {
+    display: flex;
+    justify-content: space-between;
+    color: var(--white);
+}
+
+#logo-cont, #menu-cont {
+    margin: auto 0;
+    display: flex;
+    color: var(--white);
+}
+
+nav #logo-cont * {
+    margin: auto 0;
+}
+
+nav #logo-cont img {
+    margin-right: 1rem;
+    transition: 0.25s ease-in-out height;
+}
+
+nav #logo-cont div {
+    line-height: 1.4;
+    transition: 0.25s ease-in-out font-size;
+}
+
+nav #logo-cont span#logo-title {font-weight: 700;}
+
+#menu-cont #menu-title {
+    font-size: 1.25rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-right: 0.5rem;
+    line-height: 0.75;
+}
+
+#menu-cont * {margin: auto 0;}
+
+#menu-cont #menu-tofuburger div {
+    width: 25px;
+    height: 0;
+    border: 2px solid var(--white);
+    margin: 4px 0;
+}
+
+@media only screen and (max-width: 1300px) {
+    nav #logo-cont div {
+        font-size: 0.75rem;
+    }
+}
+
+/* SCROLL NAV */
+
+nav.scrollnav {
+    background-color: var(--white);
+    filter: drop-shadow(0 3px 6px rgba(0,0,0,0.16));
+}
+
+nav.scrollnav #logo-cont, nav.scrollnav #menu-cont {color: var(--black);}
+
+nav.scrollnav #menu-cont #menu-tofuburger div {border: 2px solid var(--black);}
+
+nav.scrollnav #logo-cont img {height: 40px;}
+
+nav.scrollnav #logo-cont div {font-size: 0.75rem;}
+
+@media only screen and (max-width: 980px) {
+    #logo-text-cont {
+        display: none;
+    }
+}
+
+
+/* Open Menu */

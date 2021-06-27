@@ -1,0 +1,89 @@
+form.form-step {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+form.form-step input, form.form-step select, form.form-step textarea {
+    width: calc(50% - 1rem);
+    margin-bottom: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid var(--grey);
+    background-color: var(--light);
+    border-radius: 4px 4px 0 0;
+    color: var(--black);
+    line-height: 1.6;
+}
+
+form.form-step .fullwidth {
+    width: 100%;
+}
+
+form.form-step input:focus{
+    border-bottom: 1.5px solid var(--red);
+    color: var(--black);
+}
+
+form.form-step select option {
+    color: var(--black);
+}
+
+form.form-step .nobottom {
+    margin-bottom: 0;
+}
+
+form.form-step button {
+    width: calc(50% - 1rem);
+    margin: 0 0 0 auto;
+}
+
+input[type=checkbox] { 
+    display:none;
+} 
+
+input[type=checkbox] + label {
+    display: block;
+    padding-left: 1.5em;
+    text-indent: -.7em;
+}
+
+input[type=checkbox] + label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f096";
+    letter-spacing: 10px;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked + label:before { 
+    content: "\f046";
+    color: var(--red);
+} 
+
+input[type=checkbox]:checked + label:before { 
+    letter-spacing: 7.5px;
+}
+
+input[type=text], input[type=number], input[type=email], textarea, select {
+    background-color: var(--white);
+    border: 1px solid var(--black);
+    padding: 0.3rem 0.5rem;
+}
+
+form .chk-group {
+    display: flex;
+    width: calc(50% - 1rem);
+    line-height: 1;
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 629.5px) {
+    form.form-step input, form.form-step select, form.form-step button, form .chk-group {
+        width: 100%;
+    }
+
+    form.form-step .nobottom {margin-bottom: 1rem;}
+}
