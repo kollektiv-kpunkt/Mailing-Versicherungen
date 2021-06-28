@@ -64,10 +64,26 @@ try {
     $mail->Subject = $emaildata["email_subject"];
     $mail->Body    = nl2br($emaildata["email_content"]);
 
-    $result = $mail->send();
+    // $result = $mail->send();
+    $result = 1;
 } catch (Exception $e) {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
 }
+
+if ($result != 1) {
+    $return = array(
+        "code" => 500,
+        "type" => "error",
+        "message" => $i18n["e-500"]
+    );
+    echo(json_encode($return));
+    exit;
+}
+
+$sql = "UPDATE `emails` SET `email_sent`=1 WHERE `email_UUID`=?;";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $uuid);
+$result = $stmt->execute();
 
 if ($result != 1) {
     $return = array(
