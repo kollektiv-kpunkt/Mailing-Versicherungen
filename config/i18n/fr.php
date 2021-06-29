@@ -1,9 +1,8 @@
 <?php
 
 $i18n = array(
-    "_CODE" => "de",
+    "_CODE" => "fr",
     "sitetitle" => "Versicherungen: So nicht!",
-    "og-description" => "Ausländer*innen werden aufgrund ihrer Nationalität beim Abschluss einer Autoversicherung diskriminiert. Die Prämien für Ausländer*innen sind bis zu 80% höher, als jene für Menschen mit Schweizer Pass.",
 
 
     // // SECTIONS
@@ -103,7 +102,7 @@ EOD,
     "m-small" => array(
         array(
             "title" => "Datenschutz",
-            "slug" => "https://www.sp-ps.ch/de/partei/wir-sind-die-sp/datenschutz-policy",
+            "slug" => "/datenschutz",
             "target" => "_blank",
         )
     ),

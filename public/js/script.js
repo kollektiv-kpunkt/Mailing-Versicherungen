@@ -38,3 +38,43 @@ $(".ajax-form").submit(function(e) {
         }
     });
 })
+
+// Loader
+window.addEventListener("DOMContentLoaded", function(){
+    setTimeout(() => {
+        $("#loader").addClass("hide") 
+    }, 500);
+})
+
+// Menu
+$("#menu-cont").click(function(){
+    $("#menuDim").addClass("show")
+    $("#navmenu-cont").addClass("show")
+    $("html").addClass("noscroll")
+})
+
+$("#close-icon").click(function(){
+    $("#menuDim").removeClass("show")
+    $("#navmenu-cont").removeClass("show")
+    $("html").removeClass("noscroll")
+})
+
+$("#menuDim").click(function(){
+    $("#menuDim").removeClass("show")
+    $("#navmenu-cont").removeClass("show")
+    $("html").removeClass("noscroll")
+})
+
+$(".navitem").click(function(){
+    if ($(this).attr("href").startsWith("/#")){
+        $("#menuDim").removeClass("show")
+        $("#navmenu-cont").removeClass("show")
+        $("html").removeClass("noscroll")
+    }
+
+    if ($(this).attr("target").startsWith("_")){
+        $("#menuDim").removeClass("show")
+        $("#navmenu-cont").removeClass("show")
+        $("html").removeClass("noscroll")
+    }
+})

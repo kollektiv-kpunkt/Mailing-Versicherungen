@@ -11,9 +11,20 @@ use Pecee\SimpleRouter\SimpleRouter as Router;
 
 Router::get('/', function() {
     $subtitle = "";
+    $namespace = "home";
     include "../templates/home.php";
 });
 
+Router::get($i18n["s-donate"], function() {
+    $subtitle = " - Spenden";
+    $namespace = "content";
+    $lightNav = TRUE;
+    include "../templates/donate.php";
+});
+
+
+
+// Form Submission
 Router::post('/interface/{step}', function($step) {
     require "../interfaces/{$step}.php";
 });
