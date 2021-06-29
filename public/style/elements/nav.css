@@ -5,6 +5,7 @@ nav {
     width: 100%;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
+    z-index: 99;
 }
 
 #nav-cont {
@@ -76,7 +77,7 @@ nav.lightNav #menu-cont #menu-tofuburger div {
 nav.scrollnav {
     background-color: var(--white);
     filter: drop-shadow(0 3px 6px rgba(0,0,0,0.16));
-    z-index: 100;
+    z-index: 99;
 }
 
 nav.scrollnav #logo-cont, nav.scrollnav #menu-cont {color: var(--black);}
