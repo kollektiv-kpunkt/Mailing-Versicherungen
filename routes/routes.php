@@ -28,3 +28,8 @@ Router::get($i18n["s-donate"], function() {
 Router::post('/interface/{step}', function($step) {
     require "../interfaces/{$step}.php";
 });
+
+// Email Preview
+Router::get('/tests/email', function() {
+    require "../interfaces/email-thx.php";
+});
