@@ -29,7 +29,11 @@ Router::post('/interface/{step}', function($step) {
     require "../interfaces/{$step}.php";
 });
 
-// Email Preview
+// Tests
+Router::get('/tests{placeholder}', function() {
+    die("You're done, dude");
+});
+
 Router::get('/tests/email', function() {
     require "../interfaces/email-thx.php";
 });
