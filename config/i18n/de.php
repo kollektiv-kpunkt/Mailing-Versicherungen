@@ -82,6 +82,9 @@ EOD,
     "misc-privacy" => "<small>Ich bin einverstanden, dass die SP mich  auf dem Laufenden hält. Mehr dazu <a href='https://www.sp-ps.ch/de/partei/wir-sind-die-sp/datenschutz-policy' target='_blank'>hier.</a></small>",
     "misc-subject" => "E-Mail Betreff",
     "misc-mailcontent" => "E-Mail Inhalt",
+    "misc-counter" => <<<EOD
+Bereits <b><span id="counter">[number]</span> Personen</b> haben eine E-Mail verschickt!
+EOD,
 
     // Email
     "email-subject" => "Stellungnahme zu ihrem Verhalten",
@@ -90,6 +93,15 @@ Sehr geehrte [insurance]
 
 Ausländer*innen, die eine Autoversicherung abschliessen, zahlen bis zu 80%  mehr Prämien als Schweizer*innen. Das zeigte eine Studie von comparis.ch.
 Auch Sie verrechnen unterschiedliche Prämien je nach Nationalität Ihrer Versicherten. Ich bin schockiert über diese Ungerechtigkeit. Ich bitte Sie um eine Stellungnahme und eine Anpassung dieser diskriminierenden Praxis.
+
+Mit freundlichen Grüssen
+[fname] [lname]
+EOD,
+    "email-content-insured" => <<<EOD
+Sehr geehrte [insurance]
+
+Ausländer*innen, die eine Autoversicherung abschliessen, zahlen bis zu 80%  mehr Prämien als Schweizer*innen. Das zeigte eine Studie von comparis.ch.
+Auch Sie verrechnen unterschiedliche Prämien je nach Nationalität Ihrer Versicherten. Ich bin schockiert über diese Ungerechtigkeit. Als bei Ihnen versicherte Person finde ich dieses Verhalten beschämend, bitte Sie um eine Stellungnahme und fordere Sie zur Anpassung dieser diskriminierenden Praxis auf.
 
 Mit freundlichen Grüssen
 [fname] [lname]
@@ -182,6 +194,14 @@ EOD,
     // Codes / Error messages
     "e-500" => "Da ist etwas schief gelaufen. Bitte versuche es später nochmals",
     "e-500.1" => "Dieses E-Mail ist zu lang. Bitte halte dich ein bisschen kürzer!",
+
+    // Cookies
+    "cp-title" => "Datenschutz",
+    "cp-content" => "Wir benutzen Cookies, um die Besuche auf dieser Webseite zu analysieren.",
+    "cp-link" => "https://www.sp-ps.ch/de/partei/wir-sind-die-sp/datenschutz-policy",
+    "cp-b1" => "Okay!",
+    "cp-b2" => "Nope!",
+    "cp-more" => "Mehr erfahren",
 
 
 )

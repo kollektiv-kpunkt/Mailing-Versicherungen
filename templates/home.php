@@ -1,6 +1,24 @@
 <?php
 include __DIR__ . "/partials/header.part.php";
+
+global $conn;
+
+$sql = "SELECT COUNT(email_UUID) as number FROM `emails`;";
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$result = $stmt->get_result()->fetch_assoc();
+
+if ($result["number"] <= 12) {
+    $result["number"] = 12;
+}
+
+$needle = "[number]";
+$haystack = $result["number"];
+$counter = str_replace($needle, $haystack, $i18n["misc-counter"]);
+
 ?>
+
+
 
 <div id="heroine">
     <div id="heroine-cont" class="mdcont">
@@ -62,6 +80,9 @@ include __DIR__ . "/partials/header.part.php";
             <h4 style="color: var(--red)" id="thx-title"></h4>
             <p id="thx-content"><?= $i18n["email-thx-content"] ?></p>
         </form>
+        <div id="counter-cont">
+            <p style="margin:0"><?= $counter ?></p>
+        </div>
     </div>
 </div>
 

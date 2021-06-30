@@ -45,7 +45,11 @@ if ($result != 1) {
 $email_subject = $i18n["email-subject"] . " ({$uuid})";
 $tags = array("[fname]", "[lname]", "[insurance]");
 $replace = array($fname, $lname, $i18n["misc-insurances"][$insurance]["name"]);
-$email_content = str_replace($tags, $replace, $i18n["email-content"]);
+if ($insured == 1) {
+    $email_content = str_replace($tags, $replace, $i18n["email-content-insured"]);
+} else {
+    $email_content = str_replace($tags, $replace, $i18n["email-content"]);
+}
 
 $return = array(
     "code" => 200,

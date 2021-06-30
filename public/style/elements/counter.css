@@ -1,0 +1,14 @@
+#counter-cont {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--light);
+    color: var(--black);
+    border-radius: 3px;
+    border: 2px solid var(--grey);
+    margin-top: 2rem;
+    box-sizing: border-box;
+}
+
+#counter-cont b {
+    color: var(--red);
+}

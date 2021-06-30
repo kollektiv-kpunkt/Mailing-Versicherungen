@@ -35,9 +35,9 @@ Router::get('/tests{placeholder}', function() {
     die("You're done, dude");
 });
 
-Router::get('/tests/email', function() {
-    require "../interfaces/email-thx.php";
-});
+// Router::get('/tests/email', function() {
+//     require "../tests/test-email.php";
+// });
 
 use Pecee\Http\Request;
 use Pecee\SimpleRouter\Handlers\IExceptionHandler;

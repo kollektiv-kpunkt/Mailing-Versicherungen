@@ -29,6 +29,7 @@ $(".ajax-form").submit(function(e) {
                 nextForm.find("textarea#email").val(response.emailContent)
             } if (nextStep == 3) {
                 $("#thx-title").html(response.thxTitle)
+                $("span#counter").html(parseInt($("span#counter").html()) + 1)
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {
