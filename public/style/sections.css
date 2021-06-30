@@ -20,3 +20,8 @@
     margin-top: 1.5rem;
     margin-bottom: 2rem;
 }
+
+#main-content.content {
+    padding-top: calc(3rem + var(--navbarHeight));
+    padding-bottom: 5rem;
+}

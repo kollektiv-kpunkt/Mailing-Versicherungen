@@ -10,3 +10,18 @@ html {
     background-color: var(--white);
     scroll-behavior: smooth;
 }
+
+html.noscroll {
+    overflow-y: hidden;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge add Firefox */
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none; /* Firefox */
+}

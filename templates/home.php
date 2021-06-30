@@ -36,7 +36,7 @@ include __DIR__ . "/partials/header.part.php";
                 <?php
                 $i = 1;
                 foreach ($i18n["misc-insurances"] as $insurance) {
-                    echo("<option value='insc-{$i}'>$insurance</option>");
+                    echo("<option value='insc-{$i}'>{$insurance['name']}</option>");
                     $i++;
                 }
                 ?>

@@ -32,4 +32,8 @@ var styleSets = function styleSets() {
 
 window.addEventListener("load", styleSets, false);
 window.addEventListener("resize", styleSets, false);
-window.addEventListener("scroll", styleSets, false);
+window.addEventListener("scroll", function(){
+    setTimeout(() => {
+        styleSets
+    }, 250);
+}, false);
