@@ -44,6 +44,9 @@ $counter = str_replace($needle, $haystack, $i18n["misc-counter"]);
     <div class="section-cont smcont">
         <h2 class="section-title"><?= $i18n["participate-title"] ?></h2>
         <p class="section-content"><?= $i18n["participate-content"] ?></p>
+        <div class="alert-container" style="display: none;">
+            <p id="form-alert">This is an alert message!</p>
+        </div>
         <form data-interface="step1" data-step="1" class="ajax-form form-step">
             <input type="text" placeholder="<?= $i18n["misc-fname"] ?>" name="fname" required>
             <input type="text" placeholder="<?= $i18n["misc-lname"] ?>" name="lname" required>
@@ -56,6 +59,9 @@ $counter = str_replace($needle, $haystack, $i18n["misc-counter"]);
                 foreach ($i18n["misc-insurances"] as $insurance) {
                     echo("<option value='insc-{$i}'>{$insurance['name']}</option>");
                     $i++;
+                }
+                if ($config["test-mode"] == TRUE) {
+                    echo("<option value='insc-test'>{$i18n["misc-insurances"]["insc-test"]['name']}</option>");
                 }
                 ?>
             </select>
@@ -74,11 +80,18 @@ $counter = str_replace($needle, $haystack, $i18n["misc-counter"]);
             <input type="text" class="fullwidth" name="subject" placeholder="<?= $i18n["misc-subject"] ?>" id="subject" required>
             <textarea name="email" id="email" class="fullwidth" rows="8" placeholder="<?= $i18n["misc-mailcontent"] ?>" required></textarea>
             <input type="hidden" name="uuid" id="uuid-2">
-            <button type="submit" class="button"><?= $i18n["b-next"] ?></button>
+            <button type="submit" class="button" onclick=""><?= $i18n["b-next"] ?></button>
         </form>
         <form data-interface="step3" data-step="3" class="ajax-form form-step" style="display: none;">
             <h4 style="color: var(--red)" id="thx-title"></h4>
             <p id="thx-content"><?= $i18n["email-thx-content"] ?></p>
+            <div class="buttongrid one">
+                <?php
+                    $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
+                ?>
+                <a href="<?= "https://api.whatsapp.com/send?text=" . urlencode($i18n["mobi-msg"] . "\n" . $actual_link) ?>" class="button" id="WhatsApp"><?= $i18n["wa-text"] ?></a>
+                <a href="<?= "https://t.me/share/url?url=" . urlencode($actual_link) . "&text=" . urlencode($i18n["mobi-msg"] . "\n" . $actual_link) ?>" class="button" id="Telegram"><?= $i18n["tele-text"] ?></a>
+            </div>
         </form>
         <div id="counter-cont">
             <p style="margin:0"><?= $counter ?></p>

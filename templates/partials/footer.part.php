@@ -17,7 +17,7 @@
             ?>
             <span id='credits'>Made with ♥ | <a href='https://www.kpunkt.ch' target='_blank'>Webdesign by <b>K.</b></a></span>
         </div>
-        <div id="close-icon">Schliessen</div>
+        <div id="close-icon"><?= $i18n["b-close"] ?></div>
     </div>
 </div>
 
@@ -35,7 +35,7 @@
         bannerHeading: "<p style='margin-top:0;margin-bottom:0.5em'><b><?= $i18n["cp-title"] ?></b></p>",
         acceptBtnText: "<?= $i18n["cp-b1"] ?>",
         acceptBtnColor: "var(--white)",
-        acceptBtnBackground: "var(--black)",
+        acceptBtnBackground: "var(--red)",
         rejectBtnText: "<?= $i18n["cp-b2"] ?>",
         rejectBtnColor: "var(--red)",
         rejectBtnBackground: "var(--light)",

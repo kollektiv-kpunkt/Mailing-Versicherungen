@@ -30,6 +30,17 @@
     --buttonbackgroundcolor: transparent;
 }
 
+.button#WhatsApp {
+    --buttoncolor: var(--white);
+    --buttonbordercolor: #25D366;
+    --buttonbackgroundcolor: #25D366;
+}
+.button#Telegram {
+    --buttoncolor: var(--white);
+    --buttonbordercolor: #0088cc;
+    --buttonbackgroundcolor: #0088cc;
+}
+
 .buttongrid {
     display: flex;
     flex-wrap: wrap;
@@ -43,6 +54,15 @@
 .buttongrid .button {
     width: calc(50% - 0.5rem);
     box-sizing: border-box;
+}
+
+.buttongrid.one .button {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.buttongrid.one .button:first-of-type {
+    margin-bottom: 1rem;
 }
 
 @media only screen and (max-width: 1200px) {

@@ -81,4 +81,4 @@ if (!isset($ogimg)) {
 
 </nav>
 
-<div id="main-content" class="<?= $namespace ?>">
+<div id="main-content" class="<?= $namespace ?> <?= $i18n["_CODE"] ?>">

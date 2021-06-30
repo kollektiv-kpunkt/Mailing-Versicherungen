@@ -2,7 +2,7 @@
 
 $i18n = array(
     "_CODE" => "fr",
-    "sitetitle" => "Assurances : cela ne peut plus continuer&nbsp;!",
+    "sitetitle" => "Assurances : cela ne peut plus continuer !",
 
 
     // // SECTIONS
@@ -17,7 +17,7 @@ EOD,
 
     // Participate
     "participate-title" => "Écris un e-mail&nbsp;!",
-    "participate-content" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "participate-content" => "C'est une évidence&nbsp;: la couleur de notre passeport n'a aucune influence sur notre façon de conduire. En conséquence, écris dès maintenant un courriel aux compagnies d'assurance qui pratiquent encore cette pratique discriminatoire. Ensemble, nous pouvons envoyer un signal important.",
     
     // More Info
     "more-title" => "De quoi s'agit-il&nbsp;?",
@@ -29,7 +29,7 @@ EOD,
     // // PAGES
     // Donate
     "d-title" => "Faire un don",
-    "d-content" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "d-content" => "Pour atteindre le plus grand nombre de personnes possible et continuer à lutter contre la discrimination, nous comptons sur ton don. Chaque contribution, aussi petite soit-elle, nous aide.",
 
     // // ELEMENTS
     // Logo
@@ -41,6 +41,8 @@ EOD,
     "b-donate" => "Donner",
     "b-more-info" => "Plus dinfos",
     "b-next" => "Suivant",
+    "b-back" => "Retour",
+    "b-close" => "Fermer",
 
     // Slugs
     "s-participate" => "participer",
@@ -58,29 +60,36 @@ EOD,
     "misc-insurances" => array(
         "insc-1" => array(
             "name" => "Baloise Assurances",
-            "email" => "timothy@kpunkt.ch"
+            "email" => "zufrieden@baloise.ch"
         ),
         "insc-2" => array(
             "name" => "Assurance TCS",
-            "email" => "timothy.oesch@gmail.com"
+            "email" => "info@tcs.ch"
         ),
         "insc-3" => array(
             "name" => "Helvetia Assurances",
-            "email" => "timothy.oesch@gmail.com"
+            "email" => "info@helvetia.ch"
         ),
         "insc-4" => array(
             "name" => "AXA Winterthur",
-            "email" => "timothy.oesch@gmail.com"
+            "email" => "info@axa.ch"
         ),
         "insc-5" => array(
             "name" => "Zurich Assurances",
-            "email" => "timothy.oesch@gmail.com"
+            "email" => "contact@zurich.ch"
         ),
+        // "insc-6" => array(
+        //    "name" => "TESTING PLEASE DISABLE",
+        //    "email" => "timothy.oesch@gmail.com"
+        // ),
     ),
     "misc-insured" => "<small>Je suis assuré auprès de cette compagnie d'assurance et j'aimerais le leur faire savoir.</small>",
     "misc-privacy" => "<small>J'accepte que le PS Suisse me tienne informé. Plus d'infos <a href='https://www.sp-ps.ch/fr/politique-de-protection-des-donnees' target='_blank'>ici.</a></small>",
     "misc-subject" => "Sujet de l'e-mail",
     "misc-mailcontent" => "Contenu de l'e-mail",
+    "misc-counter" => <<<EOD
+Déjà <b><span id="counter">[number]</span> personnes</b> ont envoyé un courriel !
+EOD,
 
     // Email
     "email-subject" => "Commentaires sur votre comportement",
@@ -107,7 +116,7 @@ EOD,
     "wa-text" => "Partager via WhatsApp",
     "tele-text" => "Partager via Telegram",
     "donate-text" => "Faire un don",
-    "mobi-msg" => "Salut, savais-tu que les personnes étrangères doivent payer des primes bien plus élevées auprès des assurances automobiles ? C’est totalement injuste ! Il y a une campagne en cours qui te propose d’envoyer un mail aux assurances sur cette question. Je l’ai déjà fait et trouverais super que tu y participes :) [link]",
+    "mobi-msg" => "Salut,\nsavais-tu que les personnes étrangères doivent payer des primes bien plus élevées auprès des assurances automobiles ? C’est totalement injuste ! Il y a une campagne en cours qui te propose d’envoyer un mail aux assurances sur cette question. Je l’ai déjà fait et trouverais super que tu y participes :)",
     "emailthx-subject" => "Merci pour ta contribution contre la discrimination des primes!",
     "emailthx-content" => <<<EOD
 <h3>Bonjour [fname] [lname]</h3>
@@ -188,9 +197,17 @@ EOD,
     ),
 
     // Codes / Error messages
-    "e-500" => "Da ist etwas schief gelaufen. Bitte versuche es später nochmals",
-    "e-500.1" => "Dieses E-Mail ist zu lang. Bitte halte dich ein bisschen kürzer!",
+    "e-500" => "Quelque chose a mal tourné. Veuillez réessayer plus tard",
+    "e-500.1" => "Cet email est trop long. S'il te plaît, garde-le un peu plus court !",
+    "e-505" => "Tu as déjà envoyé un courriel à cette compagnie d'assurance&nbsp;! Tu es invité à écrire un autre courriel.",
 
+    // Cookies
+    "cp-title" => "Protéction des données",
+    "cp-content" => "Nous utilisons des cookies pour analyser les visites sur ce site web.",
+    "cp-link" => "https://www.sp-ps.ch/fr/politique-de-protection-des-donnees",
+    "cp-b1" => "Okay!",
+    "cp-b2" => "Nope!",
+    "cp-more" => "En savoir plus",
 
 )
 

@@ -21,15 +21,21 @@ $(".ajax-form").submit(function(e) {
         data : formData,
         success: function(response, textStatus, jqXHR) {
             console.log(response);
-            thisForm.css("display", "none");
-            nextForm.css("display", "unset");
-            if (nextStep == 2) {
-                nextForm.find("input#uuid-2").val(response.uuid)
-                nextForm.find("input#subject").val(response.emailSubject)
-                nextForm.find("textarea#email").val(response.emailContent)
-            } if (nextStep == 3) {
-                $("#thx-title").html(response.thxTitle)
-                $("span#counter").html(parseInt($("span#counter").html()) + 1)
+            if (response.type == "success") {
+                thisForm.parent().find(".alert-container").css("display", "none")
+                thisForm.css("display", "none");
+                nextForm.css("display", "unset");
+                if (nextStep == 2) {
+                    nextForm.find("input#uuid-2").val(response.uuid)
+                    nextForm.find("input#subject").val(response.emailSubject)
+                    nextForm.find("textarea#email").val(response.emailContent)
+                    nextForm.find("button[type=submit").attr("onClick", response.onclick)
+                } if (nextStep == 3) {
+                    $("#thx-title").html(response.thxTitle)
+                    $("span#counter").html(parseInt($("span#counter").html()) + 1)
+                }
+            } else if (response.type == "error" || response.type == "danger") {
+                thisForm.parent().find(".alert-container").css("display", "block").addClass(response.type).children("p").html(response.message)
             }
         },
         error: function (jqXHR, textStatus, errorThrown) {

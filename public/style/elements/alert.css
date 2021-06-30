@@ -1,0 +1,29 @@
+.alert-container {
+    margin-bottom: 2rem;
+    padding: 0.75rem;
+    background-color: var(--alertbgcolor);
+    color: var(--alertcolor);
+    border-radius: 3px;
+    border: 2px solid var(--alertcolor);
+    margin-top: 2rem;
+    box-sizing: border-box;
+}
+
+.alert-container p {
+    margin: 0;
+}
+
+.alert-container.error {
+    --alertcolor: #721c24;
+    --alertbgcolor: #f5c6cb;
+}
+
+.alert-container.danger {
+    --alertcolor: #856404;
+    --alertbgcolor: #ffeeba;
+}
+
+.alert-container.success {
+    --alertcolor: #155724;
+    --alertbgcolor: #c3e6cb;
+}

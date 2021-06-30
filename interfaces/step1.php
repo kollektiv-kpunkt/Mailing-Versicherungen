@@ -26,6 +26,27 @@ if (isset($_POST["privacy"])) {
     $privacy = 0;
 }
 
+if ($insurance != "insc-6") {
+    $sql = "SELECT COUNT(*) as numrows from `emails` WHERE `email_email` = ? && `email_insurance` = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ss", $email, $insurance);
+    $stmt->execute();
+    $result = $stmt->get_result()->fetch_assoc();
+    
+    if ($result["numrows"] != 0) {
+        $return = array(
+            "code" => 505,
+            "type" => "danger",
+            "message" => $i18n["e-505"]
+        );
+    
+        echo(json_encode($return));
+        exit;
+    }
+}
+
+
+
 $sql = "INSERT into `emails` (`email_UUID`, `email_fname`, `email_lname`, `email_email`, `email_phone`, `email_insurance`, `email_insured`, `email_optin`) VALUES (?,?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE `email_UUID`=`email_UUID`;";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("ssssssss", $uuid, $fname, $lname, $email, $phone, $insurance, $insured, $privacy);
@@ -56,7 +77,8 @@ $return = array(
     "type" => "success",
     "uuid" => $uuid,
     "emailSubject" => $email_subject,
-    "emailContent" => $email_content
+    "emailContent" => $email_content,
+    "onclick" => "_paq.push(['trackEvent', 'EmailCampaign', 'Sent', '{$insurance}']);"
 );
 echo(json_encode($return));
 exit;

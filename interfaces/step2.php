@@ -60,6 +60,7 @@ try {
     //Recipients
     $mail->setFrom($config["email-user"], "{$emaildata['email_fname']} {$emaildata['email_lname']}");
     $mail->addAddress($i18n["misc-insurances"][$emaildata["email_insurance"]]["email"], $i18n["misc-insurances"][$emaildata["email_insurance"]]["name"]);
+    $mail->addReplyTo($emaildata["email_email"], "{$emaildata['email_fname']} {$emaildata['email_lname']}");
 
     //Content
     $mail->isHTML(true);

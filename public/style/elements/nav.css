@@ -132,7 +132,7 @@ nav.scrollnav #logo-cont div {font-size: 0.75rem;}
     background-color: var(--black);
     z-index: 999;
     transform: translateX(100%);
-    transition: 0.75s ease-in-out transform;
+    transition: 0.5s ease-in-out transform;
 }
 
 #navmenu-cont.show {
