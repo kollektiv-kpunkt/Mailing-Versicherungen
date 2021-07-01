@@ -23,7 +23,7 @@ EOD,
     // More Info
     "more-title" => "Darum geht's:",
     "more-content" => <<<EOD
-<p>Eine <a href="https://www.comparis.ch/autoversicherung/versicherung/studie/autoversicherung-preisunterschied-auslaender" target="_blank">Studie von comparis</a>.ch hat festgestellt, dass Ausländer:innen viel höhere Prämien bei Autoversicherungen zahlen müssen, als Menschen mit Schweizer Pass. Bei gewissen Versicherungen sind diese Prämien bis zu 80% höher. Dabei wird stark unterschieden zwischen verschiedenen Nationalitäten. Dadurch werden rassistische Klischees bekräftigt.</p>
+<p>Eine <a href="https://www.comparis.ch/autoversicherung/versicherung/studie/autoversicherung-preisunterschied-auslaender" target="_blank">Studie von comparis.ch</a> hat festgestellt, dass Ausländer:innen viel höhere Prämien bei Autoversicherungen zahlen müssen, als Menschen mit Schweizer Pass. Bei gewissen Versicherungen sind diese Prämien bis zu 80% höher. Dabei wird stark unterschieden zwischen verschiedenen Nationalitäten. Dadurch werden rassistische Klischees bekräftigt.</p>
 <p>Die zugrundeliegenden Risikoeinschätzungen sind undurchsichtig und diskriminierend. Für uns ist klar: <b>Niemand darf wegen einer Passfarbe diskriminiert werden.</b></p>
 EOD,
 
