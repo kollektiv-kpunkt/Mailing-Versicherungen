@@ -3,6 +3,8 @@
 $i18n = array(
     "_CODE" => "fr",
     "sitetitle" => "Assurances : cela ne peut plus continuer !",
+    "ext-link" => "https://www.sp-ps.ch/fr/parti/organes-socialistes/ps-migrant-e-s",
+    "og-description" => "Les personnes étrangères font l’objet de discriminations lors de la souscription d'une assurance automobile en raison de leur nationalité. Les primes pour ces personnes sont jusqu'à 80 % plus élevées que celles des personnes ayant un passeport suisse.",
 
 
     // // SECTIONS
@@ -165,7 +167,8 @@ EOD,
     </tbody>
 </table>
 <p>Meilleures salutations,<br>
-<b>XY & XY</b></p>
+<b>Mustafa Atici & Helena Verissimo de Freitas</b><br>
+Présidence PS Migrant-e-s Suisse</p>
 EOD,
     "emailthx-foot1" => "PS Migrant:e:s, Secrétariat central PS suisse",
     "emailthx-foot2" => "Theaterplatz 4, Case postale, 3001 Bern",

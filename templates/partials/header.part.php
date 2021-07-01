@@ -63,7 +63,7 @@ if (!isset($ogimg)) {
 
     <div id="nav-cont" class="mdcont">
         <div id="logo-cont">
-            <a href="/" style="line-height:0"><img src="/img/<?= $i18n["_CODE"] ?>/logo.png" alt="Logo"></a>
+            <a href="<?php ($namespace == "home") ? print($i18n["ext-link"] . '" target="blank') : print("/") ?>" style="line-height:0"><img src="/img/<?= $i18n["_CODE"] ?>/logo.png" alt="Logo"></a>
             <div id="logo-text-cont">
                 <span id="logo-title"><?= $i18n["logo-title"] ?></span><br>
                 <span id="logo-subtitle"><?= $i18n["logo-subtitle"] ?></span>

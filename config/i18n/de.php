@@ -3,6 +3,7 @@
 $i18n = array(
     "_CODE" => "de",
     "sitetitle" => "Versicherungen: So nicht!",
+    "ext-link" => "https://www.sp-ps.ch/de/partei/sozialdemokratische-bewegung/sp-migrantinnen",
     "og-description" => "Ausländer:innen werden aufgrund ihrer Nationalität beim Abschluss einer Autoversicherung diskriminiert. Die Prämien für Ausländer:innen sind bis zu 80% höher, als jene für Menschen mit Schweizer Pass.",
 
 
@@ -166,7 +167,8 @@ EOD,
     </tbody>
 </table>
 <p>Mit freundlichen Grüssen<br>
-<b>XY & XY</b></p>
+<b>Mustafa Atici & Helena Verissimo de Freitas</b><br>
+Präsidium SP Migrant:innen Schweiz</p>
 EOD,
     "emailthx-foot1" => "SP Migrant:innen, Zentralsekretariat SP Schweiz",
     "emailthx-foot2" => "Theaterplatz 4, Postfach, 3001 Bern",
