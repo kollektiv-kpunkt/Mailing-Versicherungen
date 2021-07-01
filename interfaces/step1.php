@@ -47,9 +47,9 @@ if ($insurance != "insc-6") {
 
 
 
-$sql = "INSERT into `emails` (`email_UUID`, `email_fname`, `email_lname`, `email_email`, `email_phone`, `email_insurance`, `email_insured`, `email_optin`) VALUES (?,?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE `email_UUID`=`email_UUID`;";
+$sql = "INSERT into `emails` (`email_UUID`, `email_fname`, `email_lname`, `email_email`, `email_phone`, `email_insurance`, `email_insured`, `email_optin`, `email_lang`) VALUES (?,?,?,?,?,?,?,?,?) ON DUPLICATE KEY UPDATE `email_UUID`=`email_UUID`;";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("ssssssss", $uuid, $fname, $lname, $email, $phone, $insurance, $insured, $privacy);
+$stmt->bind_param("sssssssss", $uuid, $fname, $lname, $email, $phone, $insurance, $insured, $privacy, $lang);
 $result = $stmt->execute();
 
 if ($result != 1) {
