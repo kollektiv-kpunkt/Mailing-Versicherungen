@@ -45,16 +45,17 @@ if (!isset($ogimg)) {
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#f5f5f5">
     
+    <!-- Lib Scripts -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+
+    <script src="/js/style.js"></script>
+    
     <!-- Lib Styles -->
     <link rel="stylesheet" href="/lib/chartist/chartist.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="/style/style.css">
 
-    <!-- Lib Scripts -->
-    <script src="/lib/jquery/jquery.min.js"></script>
-
-    <script src="/js/style.js"></script>
 </head>
 <body>
 <div id="loader"></div>

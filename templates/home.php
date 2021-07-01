@@ -89,8 +89,8 @@ $counter = str_replace($needle, $haystack, $i18n["misc-counter"]);
                 <?php
                     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'];
                 ?>
-                <a href="<?= "https://api.whatsapp.com/send?text=" . urlencode($i18n["mobi-msg"] . "\n" . $actual_link) ?>" class="button" id="WhatsApp"><?= $i18n["wa-text"] ?></a>
-                <a href="<?= "https://t.me/share/url?url=" . urlencode($actual_link) . "&text=" . urlencode($i18n["mobi-msg"] . "\n" . $actual_link) ?>" class="button" id="Telegram"><?= $i18n["tele-text"] ?></a>
+                <a href="<?= "https://api.whatsapp.com/send?text=" . urlencode($i18n["mobi-msg"] . "\n" . $actual_link) ?>" class="button" id="WhatsApp" target="_blank"><?= $i18n["wa-text"] ?></a>
+                <a href="<?= "https://t.me/share/url?url=" . urlencode($actual_link) . "&text=" . urlencode($i18n["mobi-msg"] . "\n" . $actual_link) ?>" class="button" id="Telegram" target="_blank"><?= $i18n["tele-text"] ?></a>
             </div>
         </form>
         <div id="counter-cont">
